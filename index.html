@@ -213,7 +213,7 @@ puts markdown.to_html
 
 <p>In Typora, clicking the link will expand it for editing, and command+click will open the hyperlink in your web browser.</p>
 <h3 id="URLs"><a href="#URLs" class="headerlink" title="URLs"></a>URLs</h3><p>Typora allows you to insert URLs as links, wrapped by <code>&lt;</code>brackets<code>&gt;</code>.</p>
-<p><code>&lt;i@typora.io&gt;</code> becomes <a href="mailto:&#105;&#x40;&#116;&#121;&#112;&#111;&#x72;&#x61;&#46;&#x69;&#111;">&#105;&#x40;&#116;&#121;&#112;&#111;&#x72;&#x61;&#46;&#x69;&#111;</a>.</p>
+<p><code>&lt;i@typora.io&gt;</code> becomes <a href="mailto:&#x69;&#x40;&#x74;&#121;&#112;&#x6f;&#114;&#97;&#46;&#x69;&#x6f;">&#x69;&#x40;&#x74;&#121;&#112;&#x6f;&#114;&#97;&#46;&#x69;&#x6f;</a>.</p>
 <p>Typora will also automatically link standard URLs. e.g: <a href="http://www.google.com">www.google.com</a>.</p>
 <h3 id="Images"><a href="#Images" class="headerlink" title="Images"></a>Images</h3><p>Images have similar syntax as links, but they require an additional <code>!</code> char before the start of the link. The syntax for inserting an image looks like this:</p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">Alt text</span>](<span class="link">/path/to/img.jpg</span>)</span><br><span class="line"></span><br><span class="line">![<span class="string">Alt text</span>](<span class="link">/path/to/img.jpg "Optional title"</span>)</span><br></pre></td></tr></table></figure>
@@ -281,7 +281,7 @@ puts markdown.to_html
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><time class="level-item" dateTime="2020-04-11T12:28:48.000Z" title="2020-04-11T12:28:48.000Z">2020-04-11</time><span class="level-item">2 分钟 读完 (大约 228 个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/hexo/2020/04/11/C++%E5%AD%A6%E4%B9%A0/">C++学习</a></h1><div class="content"><h1 id="C"><a href="#C" class="headerlink" title="C++"></a><strong><u>C++</u></strong></h1><blockquote>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><time class="level-item" dateTime="2020-04-11T12:28:48.000Z" title="2020-04-11T12:28:48.000Z">2020-04-11</time><span class="level-item">4 分钟 读完 (大约 539 个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/hexo/2020/04/11/C++%E5%AD%A6%E4%B9%A0/">C++学习</a></h1><div class="content"><h1 id="C"><a href="#C" class="headerlink" title="C++"></a><strong><u>C++</u></strong></h1><blockquote>
 <h5 id="main-函数"><a href="#main-函数" class="headerlink" title="main()函数"></a>main()函数</h5></blockquote>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    statements</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -339,6 +339,40 @@ puts markdown.to_html
 <td>(-2^63~2^63-1)</td>
 </tr>
 </tbody></table>
+</blockquote>
+</blockquote>
+<p>sizeof关键字：可以求整数所占用的内存空间大小</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">    short num1 = <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line">​    <span class="keyword">int</span> num2 = <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line">​    <span class="keyword">long</span> num3 = <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line">​    <span class="keyword">long</span> <span class="keyword">long</span> num4 = <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line">​    <span class="built_in">cout</span> &lt;&lt; <span class="string">"short占用内存空间为: "</span> &lt;&lt; <span class="keyword">sizeof</span>(short) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">​    <span class="built_in">cout</span> &lt;&lt; <span class="string">"short占用内存空间为: "</span> &lt;&lt; <span class="keyword">sizeof</span>(num1) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">​    <span class="built_in">cout</span> &lt;&lt; <span class="string">"int占用内存空间为: "</span> &lt;&lt; <span class="keyword">sizeof</span>(num2) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">​    <span class="built_in">cout</span> &lt;&lt; <span class="string">"long占用内存空间为: "</span> &lt;&lt; <span class="keyword">sizeof</span>(num3) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">​    <span class="built_in">cout</span> &lt;&lt; <span class="string">"long lopng占用内存空间为: "</span> &lt;&lt; <span class="keyword">sizeof</span>(num4) &lt;&lt; <span class="built_in">endl</span>;</span><br></pre></td></tr></table></figure>
+
+<h5 id="实例："><a href="#实例：" class="headerlink" title="实例："></a>实例：</h5><blockquote>
+<p>浮点型</p>
+<blockquote>
+<p>分为两种：</p>
+<p>1：单精度float</p>
+<p>2:   双精度double</p>
+<p>两者区别在于表示的有效数字范围不同</p>
+<table>
+<thead>
+<tr>
+<th>数据类型</th>
+<th>占用空间</th>
+<th>有效数字范围</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>float</td>
+<td>4字节</td>
+<td>7位有效数字</td>
+</tr>
+<tr>
+<td>double</td>
+<td>8字节</td>
+<td>15-16位有效数字</td>
+</tr>
+</tbody></table>
+<p>示例:</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">//1:单精度 float</span></span><br><span class="line">    <span class="comment">//2：双精度 double</span></span><br><span class="line">    <span class="comment">//默认情况下 输出一个小数，会显示出6位有效数字</span></span><br><span class="line">    <span class="keyword">float</span> f1 = <span class="number">3.1415926f</span>; <span class="comment">//多加一个f 是为了编译器识别为float类型，不然会识别为double类型</span></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"f1 = "</span> &lt;&lt; f1 &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">double</span> d1 = <span class="number">3.1415926</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"d1 = "</span> &lt;&lt; d1 &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//统计float和double占用的内存空间</span></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"float占用的内存空间为："</span> &lt;&lt; <span class="keyword">sizeof</span>(f1) &lt;&lt; <span class="built_in">endl</span>;  <span class="comment">//占4个字节</span></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"double占用的空间内存为："</span> &lt;&lt; <span class="keyword">sizeof</span>(d1) &lt;&lt; <span class="built_in">endl</span>; <span class="comment">//占8个字节</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">//科学计数法</span></span><br><span class="line">    <span class="keyword">float</span> f2 = <span class="number">3e2</span>f; <span class="comment">//3 * 10 ^2</span></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"f2 = "</span> &lt;&lt; f2 &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">float</span> f3 = <span class="number">3e-2</span>f; <span class="comment">//3 * 0.1 ^2</span></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"f3 = "</span> &lt;&lt; f3 &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 </blockquote>
 </blockquote>
 </div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><time class="level-item" dateTime="2020-04-11T12:28:28.000Z" title="2020-04-11T12:28:28.000Z">2020-04-11</time><span class="level-item">几秒 读完 (大约 0 个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/hexo/2020/04/11/%E6%97%A5%E8%AF%AD%E5%AD%A6%E4%B9%A0/">日语学习</a></h1><div class="content"></div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><time class="level-item" dateTime="2020-04-11T11:47:09.000Z" title="2020-04-11T11:47:09.000Z">2020-04-11</time><span class="level-item">几秒 读完 (大约 30 个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/hexo/2020/04/11/%E5%8D%9A%E5%AE%A2%E6%97%A5%E8%AE%B0/">博客日记</a></h1><div class="content"><blockquote>
